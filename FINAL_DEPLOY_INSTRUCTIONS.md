@@ -3,6 +3,7 @@
 ## What Was Wrong
 
 Your Vite project was missing critical files:
+
 - ❌ No `index.html` (required by Vite)
 - ❌ No proper entry point (`main.tsx`)
 - ❌ Start script wasn't working properly
@@ -29,11 +30,13 @@ git push origin main
 Go to Render Dashboard → Your Service → Settings
 
 **Build Command:**
+
 ```
 npm install && npm run build
 ```
 
 **Start Command:**
+
 ```
 npm start
 ```
@@ -43,6 +46,7 @@ npm start
 Render will automatically deploy. Expected time: **3-5 minutes**
 
 Watch the logs. You should see:
+
 - ✅ Build successful
 - ✅ "Running 'npm start'"
 - ✅ "Accepting connections at http://0.0.0.0:[PORT]"
@@ -51,6 +55,7 @@ Watch the logs. You should see:
 ## ✅ What Will Happen
 
 1. **Build Phase:**
+
    ```
    npm install && npm run build
    → Vite builds to dist/
@@ -60,6 +65,7 @@ Watch the logs. You should see:
    ```
 
 2. **Deploy Phase:**
+
    ```
    npm start
    → Runs: serve -s dist -l [PORT]
@@ -76,10 +82,12 @@ Watch the logs. You should see:
 ## 📋 Files Added/Changed
 
 **New Files:**
+
 - `/index.html` - Vite entry point
 - `/main.tsx` - React mounting point
 
 **Updated Files:**
+
 - `/package.json` - Added `serve` dependency, fixed start script
 - `/vite.config.ts` - Build configuration
 
