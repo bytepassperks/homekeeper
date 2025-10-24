@@ -1,13 +1,14 @@
-# Fix Render Deployment - Port Binding Issue
+# Fix Render Deployment - Missing Start Script
 
 ## The Problem
-Render is stuck at "progressing" because Vite dev server doesn't expose ports correctly for production.
+Render deployment fails with "Missing script: start" error.
 
 ## The Solution
 
-I've created two new files that will fix this:
-1. ✅ `vite.config.ts` - Configures Vite to bind to 0.0.0.0
-2. ✅ Updated `package.json` - Added proper start script
+I've created/updated these files:
+1. ✅ `start-server.js` - Custom server starter that properly uses PORT env variable
+2. ✅ `vite.config.ts` - Configures Vite to bind to 0.0.0.0 and build to dist
+3. ✅ Updated `package.json` - Fixed start script to use our custom server
 
 ## What You Need to Do NOW
 
@@ -16,23 +17,23 @@ I've created two new files that will fix this:
 In your terminal (same folder where you ran git before):
 
 ```bash
-# Add the new files
-git add vite.config.ts package.json
+# Add all the new/updated files
+git add .
 
 # Commit the changes
-git commit -m "Fix: Add vite config and start script for Render deployment"
+git commit -m "Fix: Add custom start server for Render deployment"
 
 # Push to GitHub
 git push origin main
 ```
 
-### Step 2: Update Render Settings
+### Step 2: Verify Render Settings
 
 1. Go to your Render dashboard: https://dashboard.render.com
 2. Click on your `homekeeper` service
 3. Click **"Settings"** in the left sidebar
 4. Scroll to **"Build & Deploy"** section
-5. Update these fields:
+5. Verify these settings:
 
    **Build Command**: 
    ```
@@ -44,7 +45,7 @@ git push origin main
    npm start
    ```
 
-6. Click **"Save Changes"**
+6. If different, update them and click **"Save Changes"**
 
 ### Step 3: Manually Trigger a New Deploy
 
