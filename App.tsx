@@ -23,7 +23,7 @@ import { CookieConsent, CookiePreferences } from './components/CookieConsent';
 import { createClient } from './utils/supabase/client';
 import { projectId, publicAnonKey } from './utils/supabase/info';
 import { Item, DashboardStats, UserPreferences, MaintenanceRecord, NotificationLog } from './types';
-import { toast, Toaster } from 'sonner@2.0.3';
+import { toast, Toaster } from 'sonner';
 
 type Page = 'landing' | 'dashboard' | 'catalog' | 'calendar' | 'warranties' | 'watchlist' | 'notifications' | 'webhooks' | 'pricing' | 'faq' | 'blog' | 'brand' | 'privacy' | 'terms' | 'cookies' | 'refund';
 

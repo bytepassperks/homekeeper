@@ -1,6 +1,6 @@
 import { Facebook, Twitter, Linkedin, Mail, Share2, Link as LinkIcon } from 'lucide-react';
 import { Button } from './ui/button';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface SocialShareProps {
   url?: string;
