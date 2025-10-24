@@ -1,0 +1,29 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- House Icon with Check Mark - Light Version for Dark Backgrounds -->
+  <g id="logo-icon">
+    <!-- Gradient Definitions -->
+    <defs>
+      <linearGradient id="houseGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#34D399;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    
+    <!-- House Shape -->
+    <path d="M25 12L15 20V35C15 36.1 15.9 37 17 37H23V29H27V37H33C34.1 37 35 36.1 35 35V20L25 12Z" fill="url(#houseGradientLight)"/>
+    
+    <!-- Roof -->
+    <path d="M25 8L11 20H15L25 12L35 20H39L25 8Z" fill="url(#houseGradientLight)"/>
+    
+    <!-- Check Mark Circle -->
+    <circle cx="32" cy="15" r="6" fill="#34D399"/>
+    <path d="M29.5 15L31 16.5L34.5 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Text: HomeKeeper -->
+  <g id="logo-text">
+    <text x="48" y="32" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">
+      Home<tspan fill="#60A5FA">Keeper</tspan>
+    </text>
+  </g>
+</svg>
