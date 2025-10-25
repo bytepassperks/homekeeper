@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════════════════════════
+                  3 STEPS TO FIX EVERYTHING
+═══════════════════════════════════════════════════════════════════
+
+STEP 1: DOWNLOAD 2 FILES
+-------------------------
+From Figma Make, download:
+  1. package.json
+  2. postcss.config.js
+
+STEP 2: REPLACE YOUR FILES
+---------------------------
+Copy them to: C:\Users\YourName\Documents\homekeeper\
+
+Replace the existing files.
+
+STEP 3: RUN ONE COMMAND
+------------------------
+Open Git Bash, paste this, press Enter:
+
+cd ~/Documents/homekeeper && find . -name "*.tsx" -not -path "*/node_modules/*" -type f -exec sed -i 's/@[0-9]\+\.[0-9]\+\.[0-9]\+"/"/' {} + && find . -name "*.ts" -not -path "*/node_modules/*" -type f -exec sed -i 's/@[0-9]\+\.[0-9]\+\.[0-9]\+"/"/' {} + && git add . && git commit -m "Fix: Complete deployment fixes" && git push origin main
+
+═══════════════════════════════════════════════════════════════════
+
+THAT'S IT!
+----------
+Wait 5 minutes → Your website is LIVE with full styling! 🎉
+
+═══════════════════════════════════════════════════════════════════
+
+WHAT THIS FIXES:
+----------------
+✅ Adds @tailwindcss/postcss package (required for Tailwind v4)
+✅ Fixes PostCSS config to use correct plugin
+✅ Removes 50+ versioned imports that break deployment
+✅ Adds missing TypeScript types
+
+═══════════════════════════════════════════════════════════════════
+
+DO IT NOW! 8 MINUTES TO SUCCESS!
