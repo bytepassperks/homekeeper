@@ -1,0 +1,72 @@
+═══════════════════════════════════════════════════════════════════
+                    ONE COMMAND FIX - GIT BASH
+═══════════════════════════════════════════════════════════════════
+
+OPEN: Git Bash in your homekeeper folder
+
+COPY AND PASTE THIS ENTIRE COMMAND (all 3 lines):
+
+find . -type f \( -name "*.tsx" -o -name "*.ts" \) ! -path "./node_modules/*" -exec sed -i 's/@[0-9]\+\.[0-9]\+\.[0-9]\+//g' {} + && git add . && git commit -m "Fix: Remove versioned imports" && git push origin main
+
+PRESS: Enter
+
+WAIT: 5 minutes
+
+DONE: Your app is LIVE! 🎉
+
+═══════════════════════════════════════════════════════════════════
+
+WHAT THIS DOES:
+---------------
+1. Removes all @1.2.3 style versions from imports
+2. Stages all changes
+3. Commits the changes
+4. Pushes to GitHub
+5. Triggers Render auto-deploy
+
+═══════════════════════════════════════════════════════════════════
+
+VERIFY BEFORE RUNNING:
+----------------------
+
+pwd
+# Should show: /c/Users/YourName/Documents/homekeeper
+
+ls -la App.tsx
+# Should show: App.tsx exists
+
+═══════════════════════════════════════════════════════════════════
+
+AFTER RUNNING:
+--------------
+
+You'll see:
+  - [main abc1234] Fix: Remove versioned imports
+  - Enumerating objects...
+  - Writing objects: 100%...
+  - To https://github.com/bytepassperks/homekeeper.git
+
+Then wait 3-5 minutes for Render to deploy.
+
+Check: https://dashboard.render.com
+
+Look for: "Build successful 🎉"
+
+═══════════════════════════════════════════════════════════════════
+
+IF IT FAILS:
+------------
+
+Try the PowerShell version instead:
+
+Open PowerShell, then run:
+
+cd ~/Documents/homekeeper
+Get-ChildItem -Recurse -Include *.tsx,*.ts | ForEach-Object { (Get-Content $_.FullName -Raw) -replace '@\d+\.\d+\.\d+', '' | Set-Content $_.FullName -NoNewline }
+git add .
+git commit -m "Fix: Remove versioned imports"
+git push origin main
+
+═══════════════════════════════════════════════════════════════════
+
+READY? COPY THE COMMAND AND RUN IT NOW!

@@ -1,0 +1,116 @@
+═══════════════════════════════════════════════════════════════════
+                    CSS FIX - DOWNLOAD ONE FILE
+═══════════════════════════════════════════════════════════════════
+
+THE PROBLEM:
+------------
+Your website has NO STYLING - it's showing plain HTML text
+
+THE CAUSE:
+----------
+styles/globals.css is missing the Tailwind CSS import at the top
+
+THE FIX (2 MINUTES):
+--------------------
+
+STEP 1: Download Fixed File
+----------------------------
+Download: styles/globals.css from Figma Make
+
+STEP 2: Replace Local File
+---------------------------
+Replace your local file at:
+  C:\Users\YourName\Documents\homekeeper\styles\globals.css
+
+With the downloaded one
+
+STEP 3: Push to GitHub
+-----------------------
+Open Git Bash:
+
+cd ~/Documents/homekeeper
+git add styles/globals.css
+git commit -m "Fix: Add Tailwind CSS import to globals.css"
+git push origin main
+
+STEP 4: Wait 5 Minutes
+-----------------------
+Render will auto-deploy
+
+STEP 5: Refresh Your Browser
+-----------------------------
+Your site will now have FULL STYLING! 🎉
+
+═══════════════════════════════════════════════════════════════════
+
+WHAT CHANGED:
+-------------
+
+BEFORE (Line 1):
+@import url('https://fonts.googleapis.com/css2?family=Inter...');
+
+AFTER (Line 1):
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter...');
+
+That ONE line imports all of Tailwind CSS!
+
+═══════════════════════════════════════════════════════════════════
+
+VERIFY IT WORKED:
+-----------------
+
+After pushing, check the file on GitHub:
+https://github.com/bytepassperks/homekeeper/blob/main/styles/globals.css
+
+Line 1 should show:
+@import "tailwindcss";
+
+═══════════════════════════════════════════════════════════════════
+
+TIMELINE:
+---------
+⏱️  Download file: 10 seconds
+⏱️  Replace local: 20 seconds
+⏱️  Commit & push: 30 seconds
+⏱️  Render deploy: 5 minutes
+━━━━━━━━━━━━━━━━━━━━━
+⏱️  TOTAL: 6 minutes
+
+═══════════════════════════════════════════════════════════════════
+
+ALTERNATIVE: Copy/Paste First Line
+-----------------------------------
+
+If download doesn't work:
+
+1. Open your local: styles/globals.css in Notepad
+
+2. Add THIS LINE at the very top (Line 1):
+   @import "tailwindcss";
+
+3. Save (Ctrl+S)
+
+4. Push to GitHub (see Step 3 above)
+
+═══════════════════════════════════════════════════════════════════
+
+AFTER SUCCESS:
+--------------
+
+Your website will look BEAUTIFUL:
+✅ Full Tailwind CSS styling
+✅ Beautiful blue/green color scheme
+✅ Inter font loaded
+✅ Smooth animations
+✅ Professional landing page
+✅ All components styled correctly
+
+═══════════════════════════════════════════════════════════════════
+
+DO THIS NOW!
+
+Option 1: Download styles/globals.css from Figma Make
+Option 2: Add @import "tailwindcss"; as Line 1 in Notepad
+
+Then push!

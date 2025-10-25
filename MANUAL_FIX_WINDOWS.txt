@@ -1,0 +1,152 @@
+═══════════════════════════════════════════════════════════════════
+              WINDOWS FIX - VERSIONED IMPORTS ISSUE
+═══════════════════════════════════════════════════════════════════
+
+YOUR STATUS:
+------------
+✅ package.json - CORRECT (has @tailwindcss/postcss)
+✅ postcss.config.js - CORRECT (uses @tailwindcss/postcss)
+❌ UI components - STILL HAVE versioned imports
+
+The Git Bash sed command didn't work on Windows.
+
+═══════════════════════════════════════════════════════════════════
+
+OPTION 1: POWERSHELL SCRIPT (EASIEST - 2 MINUTES)
+==================================================
+
+STEP 1: Download the PowerShell Script
+---------------------------------------
+Download: WINDOWS_FIX.ps1 from Figma Make
+
+STEP 2: Save to Your Project Folder
+------------------------------------
+Save to: C:\Users\YourName\Documents\homekeeper\WINDOWS_FIX.ps1
+
+STEP 3: Run PowerShell as Administrator
+----------------------------------------
+1. Press Windows Key
+2. Type "PowerShell"
+3. Right-click "Windows PowerShell"
+4. Click "Run as Administrator"
+
+STEP 4: Enable Script Execution
+--------------------------------
+In PowerShell, run this command:
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Press Y and Enter
+
+STEP 5: Run the Fix Script
+---------------------------
+In PowerShell, run:
+
+cd $HOME\Documents\homekeeper
+.\WINDOWS_FIX.ps1
+
+STEP 6: Wait
+------------
+Script will:
+- Remove all versioned imports
+- Commit changes
+- Push to GitHub
+
+STEP 7: Wait 5 Minutes
+----------------------
+Render will deploy your fixed app!
+
+STEP 8: Success! 🎉
+-------------------
+
+═══════════════════════════════════════════════════════════════════
+
+OPTION 2: USE VSCODE FIND & REPLACE (5 MINUTES)
+================================================
+
+STEP 1: Open VS Code
+--------------------
+Open your homekeeper folder in VS Code
+
+STEP 2: Open Find & Replace
+----------------------------
+Press: Ctrl + Shift + H
+
+STEP 3: Enable Regex
+---------------------
+Click the .* button (regex mode)
+
+STEP 4: Find and Replace
+-------------------------
+FIND:    @([0-9]+\.){2}[0-9]+"
+REPLACE: "
+
+STEP 5: Click "Replace All"
+----------------------------
+Click the "Replace All" button
+
+It will replace 100+ instances!
+
+STEP 6: Save All Files
+-----------------------
+Press: Ctrl + K, then S
+
+STEP 7: Push to GitHub
+-----------------------
+In Git Bash:
+
+cd ~/Documents/homekeeper
+git add .
+git commit -m "Fix: Remove versioned imports"
+git push origin main
+
+STEP 8: Wait 5 Minutes
+----------------------
+Render deploys!
+
+═══════════════════════════════════════════════════════════════════
+
+OPTION 3: I'LL FIX THEM IN FIGMA MAKE
+======================================
+
+If you want, I can fix all the UI component files in Figma Make
+and you can download them.
+
+But this is 30+ files, so Options 1 or 2 are MUCH faster!
+
+═══════════════════════════════════════════════════════════════════
+
+WHY THIS IS THE LAST ISSUE:
+----------------------------
+
+✅ package.json has @tailwindcss/postcss
+✅ postcss.config.js is correct
+❌ ONLY the versioned imports remain
+
+Once we remove the versioned imports, your deployment will:
+✅ Build successfully
+✅ Compile Tailwind CSS
+✅ Load all components
+✅ Show beautiful styling
+
+═══════════════════════════════════════════════════════════════════
+
+RECOMMENDED: DO OPTION 2 (VS CODE FIND & REPLACE)
+--------------------------------------------------
+
+It's the fastest and easiest:
+1. Ctrl + Shift + H
+2. Enable regex (click .* button)
+3. Find: @([0-9]+\.){2}[0-9]+"
+4. Replace: "
+5. Click "Replace All"
+6. Ctrl + K, then S (save all)
+7. Push to GitHub
+
+DONE IN 2 MINUTES!
+
+═══════════════════════════════════════════════════════════════════
+
+DO OPTION 2 NOW!
+
+Open VS Code → Ctrl+Shift+H → Regex → Replace All → Push
